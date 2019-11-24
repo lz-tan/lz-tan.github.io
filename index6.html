@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>js按钮</title>
+	</head>
+	<body>
+		<div style="margin: auto; margin-top: 100px; width: 300px; height: 200px; background: url(img/keai.jpg) no-repeat center;">
+			<input type="button" value="添加" onclick="add()"/>
+			<ul id="ul"><li><input type="button" value="删除" onclick="del(event)"/></li></ul>
+		</div>
+		</body>
+	<script>
+		var n=1;
+		function add(){
+			var ul = document.getElementById("ul");
+			var li = ul.firstChild.cloneNode(true);
+			ul.appendChild(li);
+			n++;
+		}
+		function del(event){
+			var obj = event.srcElement||event.target;
+			var li  = obj.parentNode;
+			var ul = document.getElementById("ul");
+			if(n>1){
+				ul.removeChild(li);
+				n--;
+			}else{
+				alert("删除错误");
+			}
+		}
+		</script>
+</html>
+		
