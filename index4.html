@@ -1,98 +1,219 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>节日盛宴</title>
-		<meta charset="utf-8">
-		<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+		<meta charset="utf-8" />
+		<title>我的爱好</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<style>
+			body {
+				background: url(img/pattern.png);
+			}
+			#main {
+				margin: 5px auto;
+				width: 940px;
+				background: transparent;
+				padding-bottom: 30px;
+			}
+			header {
+				background: transparent;
+				height: 130px;
+			}
+			#logo {
+				margin-left: auto;
+				margin-right: auto;
+				width: 940px;
+				height: 130px;
+				background: transparent;
+				color: #888;
+				padding: 0;
+				float: left;
+			}
+			a {
+				text-decoration: none;
+			}
+			h1 a{
+				font: normal 140% arial,sans-serif;
+				/*margin: 0 0 15px 0;*/
+				padding: 0;
+				color: #444;
+				text-transform: none;
+			}
+			/*h2 {
+				font: normal 200% arial,sans-serif;
+			}*/
+			a .span {
+				color: #B30303;
+			}
+			a:hover .span {
+				color: #444;
+			}
+			#part {
+				width: 940px;
+				overflow: hidden;
+				margin: 0 auto 0 auto;
+				padding: 15px 0 15px 0;
+			}
+			#images {
+				margin: 0 15px 10px 0;
+				padding: 0;
+				list-style: none;
+				position: relative;
+				float: left;
+			}
+			#images li {
+				display: block;
+				overflow: hidden;
+				float: left;
+				width: 155px;
+				height: 300px;
+				list-style: none;
+			}
+			footer {
+				width: 940px;
+				font: 170% "微软雅黑",arial,sans-serif;
+				padding: 5px 0 5px 0;
+				text-align: center;
+				background: #ddd;
+				background: -webkit-linear-gradient(#fff,#ddd);
+				box-shadow: rgba(0,0,0,0.2) 0 2px 2px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 15px;
+				display: block;
+				clear: both;
+			}
+			* {
+			box-sizing:border-box;
+			}
+		.item-container {
+			position: relative;
+			overflow: hidden;
+			display: inline-block;
+			text-align: center;
+			vertical-align: top;
+			margin-bottom: 20px;
+			background: -webkit-linear-gradient(left top, #D9D9D9 , #A3A3A3); /* For Safari 5.1 to 6.0 */
+		    background: -o-linear-gradient(top right, #D9D9D9, #A3A3A3); /* For Opera 11.1 to 12.0 */
+		   	background: -moz-linear-gradient(top right, #D9D9D9, #A3A3A3); /* For Firefox 3.6 to 15 */
+		    background: linear-gradient(to top right, #D9D9D9 , #A3A3A3); /* Standard syntax (must be last)*/
+		}
+		.item-container img {
+			display: block;
+			width: 100%;
+			height: auto;
+			padding: 50px;
+			-webkit-transition: all .5s ease; /* Safari and Chrome */
+		    -moz-transition: all .5s ease; /* Firefox */
+		   	-ms-transition: all .5s ease; /* IE 9 */
+		   	-o-transition: all .5s ease; /* Opera */
+		   	transition: all .5s ease;
+		}
+		.zerogrid{ width: 940px; position: relative; margin: 0 auto; padding: 0px;}
+		.zerogrid .wrap-col{margin:10px;}
+		.zerogrid .col-1-3 {float:left; display: inline-block;}
+		.zerogrid .col-1-3,.zerogrid .col-1-3-fixed{width:33.33%;}
+		
+		@media only screen and (min-width: 960px) and (max-width: 1199px) {
+			.zerogrid{width:960px;}
+		}		
+
+		@media only screen and (min-width: 768px) and (max-width: 959px) {
+			.zerogrid{width:768px;}
+		}
+
+		@media only screen and (max-width: 767px) {
+			.zerogrid .col-1-3{width:100%;}
+		}
+		</style>
+		<!--<link rel="stylesheet" href="css/zerogrid.css" />-->
 	</head>
 	<body>
-		<div class="mainbox">
+		<div id="main">
 			<header>
-				<div class="wrapper">
-					<form id="search">
-						<div>
-							<a href="#" class="button" onclick="javascript:void(0);"><span><span>搜一搜</span></span></a>
-							<input type="text" class="input" placeholder="想要找点什么...">
-						</div>
-					</form>
-				</div>
-				<div class="wrapper">
-					<div id="banner">
-						<h1><a href="index.html" id="logo"></a></h1>
-						<span class="text">Merry Christmas!<br/>12.25</span>
+				<div id="logo">
+					<h1><a href="index.html">Hobby<span class="span">---撸小动物</span></a></h1>
 					</div>
-				</div>
-				<div id="menu">
-					<div id="menu_list">
-						<nav>
-							<ul>
-								<li>
-									<a href="index.html">传说起源</a>
-								</li>
-								<li>
-									<a href="index.html">节日祝福</a>
-								</li>
-								<li>
-									<a href="index.html">风俗文化</a>
-								</li>
-								<li>
-									<a href="index.html">心灵寄语</a>
-								</li>
-							</ul>
-						</nav>
-					</div>		
-				</div>
 			</header>
-			<!-- / header -->
-			<!--content -->
-			<section id="content">
-				<article class="col1">
-					<div class="box1 min_height">
-						<h3><span><span><strong>&nbsp;</strong>Christmas is coming !</span></span></h3>
-						<div class="wrapper">
-							<figure class="left"><img src="img/page1_img1.jpg" alt=""></figure>
-							<p><strong>   众所周知，圣诞节是为了庆祝耶稣的出生而设立的，但《圣经》中却从未提及耶稣出生在这一天，甚至很多历史学家认为耶稣是出生在春天。
-								直到3世纪，12月25日才被官方定为圣诞节。圣诞节本是宗教节日。十九世纪，圣诞卡的流行、圣诞老人的出现，使圣诞节开始渐渐流行起来。
-								圣诞庆祝习俗在北欧流行后，结合着北半球冬季的圣诞装饰也出现了。十九世纪初发展至中叶，整个欧洲、美洲开始过起了圣诞节。并衍生出了相应的圣诞文化。</strong></p>
+			<div id="part">
+				<ul id="images">
+					<li><img src="img/dog-1.jpg" width="600" height="300" alt="dog_one"/></li>
+					<li><img src="img/dog-2.jpg" width="600" height="300" alt="dog_two"/></li>
+					<li><img src="img/dog-3.jpg" width="600" height="300" alt="dog_three"/></li>
+					<li><img src="img/dog-4.jpg" width="600" height="300" alt="dog_four"/></li>
+					<li><img src="img/dog-5.jpg" width="600" height="300" alt="dog_five"/></li>
+					<li><img src="img/dog-6.jpg" width="600" height="300" alt="dog_six"/></li>
+				</ul>
+			</div>
+			<div style="text-align: center;">
+				<h2 >可爱的小动物们</h2>
+			</div>
+			<div class="zerogrid">
+				<div class="col-1-3">
+					<div class="wrap-col">
+						<div class="item-container">
+							<img src="img/images-1.jpg"/>
 						</div>
-						<h3><span><span><strong>&nbsp;</strong>图片集锦</span></span></h3>
-						<ul class="list2">
-							<li>
-								<a href="#">平安夜所有家庭成员团聚在家中，共进丰盛的晚餐，然后围坐在熊熊燃烧的火炉旁，弹琴唱歌，共叙天伦之乐；
-									或者举办一个别开生面的化妆舞会，通宵达旦地庆祝圣诞夜是一个幸福、祥和、狂欢的平安夜、团圆夜，期待着圣诞节的到来。</a>
-							</li>
-							<br />
-							<li>
-								<img src="img/home.jpg" alt=""/>
-								<img src="img/older.jpeg" alt=""/>
-							</li>
-						</ul>
-					</div>
-				</article>
-				<article class="col2 pad_left1">
-					<div class="box1 min_height">
-						<h2><span><span><strong>&nbsp;</strong>时间轴</span></span></h2>
-						<p><b>2019.10.31</b>
-							<br>万圣节(Halloween)在每年的11月1日，是西方的传统节日；而万圣节前夜的10月31日是这个节日最热闹的时刻 。
-							<a href="#" class="marker">&nbsp;</a>
-						</p>
-						<p><b>2019.11.28</b>
-							<br>感恩节（Thanksgiving Day）是西方传统节日，也是美国人合家欢聚的节日。 
-							<a href="#" class="marker">&nbsp;</a>
-						</p>
-						<p><b>2019.12.24</b>
-							<br>平安夜即圣诞前夕（Christmas Eve），在大部分基督教国家是圣诞节的一部分，但现在，由于中西文化的融合，已成为世界性的一个节日。
-							<a href="#" class="marker">&nbsp;</a>
-						</p>
-						<br />
-						<div>
-							<a href="#" class="button"><span><span>了解更多...</span></span></a>
+						<div class="item-container">
+							<img src="img/images-2.jpg"/>
 						</div>
-						<a href="#" id="banner1"><img src="img/banner1.jpg" alt=""></a>
+						<div class="item-container">
+							<img src="img/images-3.jpg"/>
+						</div>
+						<div class="item-container">
+							<img src="img/images-4.jpg"/>
+						</div>
 					</div>
-					
-				</article>
-			</section>
+				</div>
+				<div class="col-1-3">
+					<div class="wrap-col">
+						<div class="item-container">
+							<img src="img/images-5.jpg"/>
+						</div>
+						<div class="item-container">
+							<img src="img/images-6.jpg"/>
+						</div>
+						<div class="item-container">
+							<img src="img/images-7.jpg"/>
+						</div>
+						<div class="item-container">
+							<img src="img/images-8.jpg"/>
+						</div>
+						<div class="item-container">
+							<img src="img/images-9.jpg"/>
+						</div>
+					</div>
+				</div>
+				<div class="col-1-3">
+					<div class="wrap-col">
+						<div class="item-container">
+							<img src="img/images-10.jpg"/>
+						</div>
+						<div class="item-container">
+							<img src="img/images-11.jpg"/>
+						</div>
+						<div class="item-container">
+							<img src="img/images-12.jpg"/>
+						</div>
+						<div class="item-container">
+							<img src="img/images-13.jpg"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer>
+				<p>Copyright &copy; lz-tan.github.io </p>
+			</footer>
 		</div>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery.kwicks-1.5.1.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#images').kwicks({
+					max : 600,
+					spacing : 2
+				})
+			});
+		</script>
 	</body>
 </html>
+

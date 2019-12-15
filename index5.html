@@ -1,257 +1,98 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8" />
-		<title>弹性盒子弹弹弹</title>
-		<style>
-			* { padding: 0; margin: 0; font-family: 'Microsoft YaHei'; }
-			body { font-size: 12px; height:2000px; }
-			img { border: none; }
-			li { list-style: none; }
-			a { color: #000; text-decoration: none; }
-			h1, h2, h3, h4, h5, h6, i, b, s, u { font-size: 12px; font-weight: normal; font-style: normal; }
-			span, strong { font-weight: normal; }
-			
-			#leftsead { width: 131px; height: 143px; position: fixed; top: 258px; right: 0px; z-index: 999; }
-			*html #leftsead { margin-top: 258px; position: absolute; top: expression(eval(document.documentElement.scrollTop)); }
-			#leftsead li { width: 131px; height: 60px; }
-			#leftsead li img { float: right; }
-			#leftsead li a { height: 49px; float: right; display: block; min-width: 47px; max-width: 131px; }
-			#leftsead li a .shows { display: block; }
-			#leftsead li a .hides { margin-right: -143px; cursor: pointer; cursor: hand; }
-			#leftsead li a.youhui .hides { position: absolute; right: 190px; top: 150px; }
-			
-			*, *:before, *:after {
-			  box-sizing: border-box;
-			}
-			
-			html {
-			  font-size: 18px;
-			  line-height: 1.5;
-			  font-weight: 300;
-			  color: #333;
-			  font-family: "Nunito Sans", sans-serif;
-			}
-			
-			body {
-			  margin: 0;
-			  padding: 0;
-			  height: 100vh;
-			}
-			
-			.content {
-			  display: flex;
-			  margin: 0 auto;
-			  justify-content: center;
-			  align-items: center;
-			  flex-wrap: wrap;
-			  max-width: 1000px;
-			}
-			
-			.heading {
-			  width: 100%;
-			  margin-left: 1rem;
-			  font-weight: 900;
-			  font-size: 1.618rem;
-			  text-transform: uppercase;
-			  letter-spacing: .1ch;
-			  line-height: 1;
-			  padding-bottom: .5em;
-			  margin-bottom: 1rem;
-			  position: relative;
-			}
-			.heading:after {
-			  display: block;
-			  content: '';
-			  position: absolute;
-			  width: 60px;
-			  height: 4px;
-			  background: linear-gradient(135deg, #1a9be6, #1a57e6);
-			  bottom: 0;
-			}
-			
-			.description {
-			  width: 100%;
-			  margin-top: 0;
-			  margin-left: 1rem;
-			  margin-bottom: 3rem;
-			}
-			
-			.card {
-			  color: inherit;
-			  cursor: pointer;
-			  width: calc(33% - 2rem);
-			  min-width: calc(33% - 2rem);
-			  height: 400px;
-			  min-height: 400px;
-			  perspective: 1000px;
-			  margin: 1rem;
-			  position: relative;
-			}
-			@media screen and (max-width: 800px) {
-			  .card {
-			    width: calc(50% - 2rem);
-			  }
-			}
-			@media screen and (max-width: 500px) {
-			  .card {
-			    width: 100%;
-			  }
-			}
-			
-			.front,
-			.back {
-			  display: flex;
-			  border-radius: 6px;
-			  background-position: center;
-			  background-size: cover;
-			  text-align: center;
-			  justify-content: center;
-			  align-items: center;
-			  position: absolute;
-			  height: 100%;
-			  width: 100%;
-			  -webkit-backface-visibility: hidden;
-			  backface-visibility: hidden;
-			  transform-style: preserve-3d;
-			  transition: ease-in-out 600ms;
-			}
-			
-			.front {
-			  background-size: cover;
-			  padding: 2rem;
-			  font-size: 1.618rem;
-			  font-weight: 600;
-			  color: #fff;
-			  overflow: hidden;
-			  font-family: Poppins, sans-serif;
-			}
-			.front:before {
-			  position: absolute;
-			  display: block;
-			  content: '';
-			  top: 0;
-			  left: 0;
-			  right: 0;
-			  bottom: 0;
-			  background: linear-gradient(135deg, #1a9be6, #1a57e6);
-			  opacity: .25;
-			  z-index: -1;
-			}
-			.card:hover .front {
-			  transform: rotateY(180deg);
-			}
-			.card:nth-child(even):hover .front {
-			  transform: rotateY(-180deg);
-			}
-			
-			
-			.back {
-			  transform: rotateY(-180deg);
-			  padding: 0 2em;
-			}
-			.card:hover .back {
-			  transform: rotateY(0deg);
-			}
-			.card:nth-child(even) .back {
-			  transform: rotateY(180deg);
-			}
-			.card:nth-child(even):hover .back {
-			  transform: rotateY(0deg);
-			}
-		</style>
-		<script type="text/javascript">
-				function show(){
-					var a=document.getElementById('warning');
-					a.style.display='block';
-				}
-				function hide(){
-					var a=document.getElementById('warning');
-					a.style.display='none';
-				}
-		</script>
-
-
+		<title>节日盛宴</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
 	</head>
 	<body>
-		<div class="content">
-			  <a class="card" href="#!">
-			    <div class="front">
-			      <p>什么都没有</p>
-			    </div>
-			    <div class="back" style="background: url(img/hanlu.jpg) no-repeat center;">
-			    </div></a>
-			    <a class="card" href="#!">
-			    <div class="front">
-			      <p>没有不重要</p>
-			    </div>
-			    <div class="back" style="background: url(img/lidong.jpg) no-repeat center;">
-			    </div></a>
-			    <a class="card" href="#!">
-			    <div class="front">
-			      <p>不信你看看</p>
-			    </div>
-			    <div class="back" style="background: url(img/liqiu.jpg) no-repeat center;">
-			    </div></a>
-			    <a class="card" href="#!">
-			    <div class="front">
-			      <p>鼠标滑一滑</p>
-			    </div>
-			    <div class="back" style="background: url(img/mangzhong.jpg) no-repeat center;">
-			    </div>		
-			    <a class="card" href="#!">
-			    <div class="front">
-			      <p>你就会发现</p>
-			    </div>
-			    <div class="back" style="background: url(img/qiufen.jpg) no-repeat center;">
-			    </div></a>
-			    <a class="card" href="#!">
-			    <div class="front">
-			      <p>背后的故事</p>
-			    </div>
-			    <div class="back" style="background: url(img/shuangjiang.jpg) no-repeat center;">
-			    </div>
-			    </a>
+		<div class="mainbox">
+			<header>
+				<div class="wrapper">
+					<form id="search">
+						<div>
+							<a href="#" class="button" onclick="javascript:void(0);"><span><span>搜一搜</span></span></a>
+							<input type="text" class="input" placeholder="想要找点什么...">
+						</div>
+					</form>
+				</div>
+				<div class="wrapper">
+					<div id="banner">
+						<h1><a href="index.html" id="logo"></a></h1>
+						<span class="text">Merry Christmas!<br/>12.25</span>
+					</div>
+				</div>
+				<div id="menu">
+					<div id="menu_list">
+						<nav>
+							<ul>
+								<li>
+									<a href="index.html">传说起源</a>
+								</li>
+								<li>
+									<a href="index.html">节日祝福</a>
+								</li>
+								<li>
+									<a href="index.html">风俗文化</a>
+								</li>
+								<li>
+									<a href="index.html">心灵寄语</a>
+								</li>
+							</ul>
+						</nav>
+					</div>		
+				</div>
+			</header>
+			<!-- / header -->
+			<!--content -->
+			<section id="content">
+				<article class="col1">
+					<div class="box1 min_height">
+						<h3><span><span><strong>&nbsp;</strong>Christmas is coming !</span></span></h3>
+						<div class="wrapper">
+							<figure class="left"><img src="img/page1_img1.jpg" alt=""></figure>
+							<p><strong>   众所周知，圣诞节是为了庆祝耶稣的出生而设立的，但《圣经》中却从未提及耶稣出生在这一天，甚至很多历史学家认为耶稣是出生在春天。
+								直到3世纪，12月25日才被官方定为圣诞节。圣诞节本是宗教节日。十九世纪，圣诞卡的流行、圣诞老人的出现，使圣诞节开始渐渐流行起来。
+								圣诞庆祝习俗在北欧流行后，结合着北半球冬季的圣诞装饰也出现了。十九世纪初发展至中叶，整个欧洲、美洲开始过起了圣诞节。并衍生出了相应的圣诞文化。</strong></p>
+						</div>
+						<h3><span><span><strong>&nbsp;</strong>图片集锦</span></span></h3>
+						<ul class="list2">
+							<li>
+								<a href="#">平安夜所有家庭成员团聚在家中，共进丰盛的晚餐，然后围坐在熊熊燃烧的火炉旁，弹琴唱歌，共叙天伦之乐；
+									或者举办一个别开生面的化妆舞会，通宵达旦地庆祝圣诞夜是一个幸福、祥和、狂欢的平安夜、团圆夜，期待着圣诞节的到来。</a>
+							</li>
+							<br />
+							<li>
+								<img src="img/home.jpg" alt=""/>
+								<img src="img/older.jpeg" alt=""/>
+							</li>
+						</ul>
+					</div>
+				</article>
+				<article class="col2 pad_left1">
+					<div class="box1 min_height">
+						<h2><span><span><strong>&nbsp;</strong>时间轴</span></span></h2>
+						<p><b>2019.10.31</b>
+							<br>万圣节(Halloween)在每年的11月1日，是西方的传统节日；而万圣节前夜的10月31日是这个节日最热闹的时刻 。
+							<a href="#" class="marker">&nbsp;</a>
+						</p>
+						<p><b>2019.11.28</b>
+							<br>感恩节（Thanksgiving Day）是西方传统节日，也是美国人合家欢聚的节日。 
+							<a href="#" class="marker">&nbsp;</a>
+						</p>
+						<p><b>2019.12.24</b>
+							<br>平安夜即圣诞前夕（Christmas Eve），在大部分基督教国家是圣诞节的一部分，但现在，由于中西文化的融合，已成为世界性的一个节日。
+							<a href="#" class="marker">&nbsp;</a>
+						</p>
+						<br />
+						<div>
+							<a href="#" class="button"><span><span>了解更多...</span></span></a>
+						</div>
+						<a href="#" id="banner1"><img src="img/banner1.jpg" alt=""></a>
+					</div>
+					
+				</article>
+			</section>
 		</div>
-		
-		<div id="leftsead">
-			<ul>
-				<li><a><img src="img/ll03.png" width="131" height="49" class="hides" /><img src="img/l03.png" width="47" height="49" class="shows" /></a></li>
-		    	<li><a id="c_btn"> <img src="img/ll05.png" width="131" height="49" class="hides" /><img src="img/l05.png" width="47" height="49" class="shows" /></a></li>
-		    	<li><a id="top_btn"> <img src="img/ll06.png" width="131" height="49" class="hides" /><img src="img/l06.png" width="47" height="49" class="shows" /></a></li>
-			</ul>
-		</div>
-		<!--leftsead end--> 
-		    <script src="js/jq.js"></script>
-		
-			<script type="text/javascript">
-		    	$(document).ready(function () {
-		
-			        $("#leftsead a").hover(function () {
-			            if ($(this).prop("className") == "youhui") {
-			
-			                $(this).children("img.hides").animate({ width: '145px', height: '343px', top: '2px' }, 600);
-			            } else {
-			                $(this).children("img.hides").show();
-			
-			                $(this).children("img.hides").animate({ marginRight: '0px' }, 'slow');
-			                $(this).children("img.shows").animate({ width: '0px' }, 200);
-			            }
-			        	}, function () {
-			            	if ($(this).prop("className") == "youhui") {
-			
-			                	$(this).children("img.hides").animate({ width: '0', height: '0', top: '150px' }, 600);
-			            	} else {
-			                	$(this).children("img.hides").animate({ marginRight: '-143px' }, 'slow', function () {
-			                    	$(this).hide();
-			                    	$(this).next("img.shows").animate({ width: '47px' }, 200);
-			                	});
-			            	}
-			        	});
-			
-			        $("#top_btn").click(function () { if (scroll == "off") return; $("html,body").animate({ scrollTop: 0 }, 600); });
-			        $("#c_btn").click(function () { if (scroll == "off") return; $("html,body").animate({ scrollTop: 2694 }, 600); });
-			    });
-		</script>
 	</body>
 </html>

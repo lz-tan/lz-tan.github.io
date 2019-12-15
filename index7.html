@@ -1,131 +1,34 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html>
 	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Home</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<link rel="stylesheet" href="css/animate.css">
-		<link rel="stylesheet" href="css/icomoon.css">
-		<link rel="stylesheet" href="css/simple-line-icons.css">
-		<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
-		<link rel="stylesheet" href="css/flexslider.css">
-		<link rel="stylesheet" href="css/bootstrap.css">
-		<link rel="stylesheet" href="css/style1.css">
-		<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic|Merriweather:300,400italic,300italic,400,700italic' rel='stylesheet' type='text/css'>
-
-		<script src="js/modernizr-2.6.2.min.js"></script>
+		<meta charset="utf-8" />
+		<title>js按钮</title>
 	</head>
-<body>
-
-<div id="fh5co-container">
-	<div class="js-sticky">
-		<div class="fh5co-main-nav">
-			<div class="container-fluid">
-				<div class="fh5co-menu-1">
-					<a href="about.html">About</a>
-				</div>
-				<div class="fh5co-logo">
-					<a href="#">foodee</a>
-				</div>
-				<div class="fh5co-menu-2">
-					<a href="other.html">Others</a>
-				</div>
-			</div>
-			
+	<body>
+		<div style="margin: auto; margin-top: 100px; width: 300px; height: 200px; background: url(img/keai.jpg) no-repeat center;">
+			<input type="button" value="添加" onclick="add()"/>
+			<ul id="ul"><li><input type="button" value="删除" onclick="del(event)"/></li></ul>
 		</div>
-	</div>
-	
-	<div id="fh5co-home" class="js-fullheight" data-section="home">
-
-		<div class="flexslider">
-			
-			<div class="fh5co-overlay"></div>
-			<div class="fh5co-text">
-				<div class="container">
-					<div class="row">
-						<h1 class="to-animate">美食家</h1>
-						<h2 class="to-animate">Lovely Designed <span>by</span> <a href="https://lz-tan.github.io" target="_blank">lz-tan.github.io</a></h2>
-					</div>
-				</div>
-			</div>
-			<ul class="slides">
-			<li style="background-image: url(images/slide_1.jpg);" data-stellar-background-ratio="0.5"></li>
-			<li style="background-image: url(images/slide_2.jpg);" data-stellar-background-ratio="0.5"></li>
-			<li style="background-image: url(images/slide_3.jpg);" data-stellar-background-ratio="0.5"></li>
-			</ul>
-		</div>
-	</div>
-	
-	
-
-	<div id="fh5co-sayings">
-		<div class="container">
-			<div class="row to-animate">
-				<div class="flexslider">
-					<ul class="slides">
-						<li>
-							<blockquote>
-								<p>&ldquo;Cooking is an art, but all art requires knowing something about the techniques and materials.&rdquo;</p>
-								<p class="quote-author">&mdash; Nathan Myhrvold</p>
-							</blockquote>
-						</li>
-						<li>
-							<blockquote>
-								<p>&ldquo;Give a man food, and he can eat for a day. Give a man a job, and he can only eat for 30 minutes on break.&rdquo;</p>
-								<p class="quote-author">&mdash; Lev L. Spiro</p>
-							</blockquote>
-						</li>
-						<li>
-							<blockquote>
-								<p>&ldquo;Find something you’re passionate about and keep tremendously interested in it.&rdquo;</p>
-								<p class="quote-author">&mdash; Julia Child</p>
-							</blockquote>
-						</li>
-						<li>
-							<blockquote>
-								<p>&ldquo;Never work before breakfast; if you have to work before breakfast, eat your breakfast first.&rdquo;</p>
-								<p class="quote-author">&mdash; Josh Billings</p>
-							</blockquote>
-						</li>
-					</ul>
-				</div>
-
-			</div>
-		</div>
-	</div>	
-</div>
-
-<div id="fh5co-footer">
-	<div class="container">
-		<div class="row row-padded">
-			<div class="col-md-12 text-center">
-				<p class="to-animate">Copyright &copy; 2019.lz-tan.github.io All rights reserved.</p>
-				<p class="text-center to-animate"><a href="#" class="js-gotop">Go To Top</a></p>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12 text-center">
-				<ul class="fh5co-social">
-					<li class="to-animate-2"><a href="#"><i class="icon-facebook"></i></a></li>
-					<li class="to-animate-2"><a href="#"><i class="icon-twitter"></i></a></li>
-					<li class="to-animate-2"><a href="#"><i class="icon-instagram"></i></a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</div>
-
-<script src="js/jquery.min1.js"></script>
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/moment.js"></script>
-<script src="js/bootstrap-datetimepicker.min.js"></script>
-<script src="js/jquery.waypoints.min.js"></script>
-<script src="js/jquery.stellar.min.js"></script>
-<script src="js/jquery.flexslider-min.js"></script>
-<script src="js/main.js"></script>
-
-</body>
+		</body>
+	<script>
+		var n=1;
+		function add(){
+			var ul = document.getElementById("ul");
+			var li = ul.firstChild.cloneNode(true);
+			ul.appendChild(li);
+			n++;
+		}
+		function del(event){
+			var obj = event.srcElement||event.target;
+			var li  = obj.parentNode;
+			var ul = document.getElementById("ul");
+			if(n>1){
+				ul.removeChild(li);
+				n--;
+			}else{
+				alert("删除错误");
+			}
+		}
+		</script>
 </html>
+		
